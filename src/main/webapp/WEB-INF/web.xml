@@ -9,6 +9,6 @@
     <param-value>classpath:resources/logger/logger.xml</param-value>
   </context-param>
     <listener>
-        <listener-class>org.springframework.web.util.L</listener-class>
+        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
     </listener>
 </web-app>
