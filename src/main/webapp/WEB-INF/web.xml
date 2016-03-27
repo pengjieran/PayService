@@ -4,4 +4,11 @@
 
 <web-app>
   <display-name>PayService</display-name>
+  <context-param>
+    <param-name>log4jConfigLocation</param-name>
+    <param-value>classpath:resources/logger/logger.xml</param-value>
+  </context-param>
+    <listener>
+        <listener-class>org.springframework.web.util.L</listener-class>
+    </listener>
 </web-app>
