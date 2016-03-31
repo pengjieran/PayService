@@ -50,6 +50,7 @@
         <level value="INFO" />
         <appender-ref ref="COMPONENT-APPENDER" />
         <appender-ref ref="ERROR-APPENDER" />
+        <appender-ref ref="console" />
     </logger>
 
     <!-- Root Logger -->

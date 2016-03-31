@@ -45,6 +45,7 @@
         </dependency>
     </dependencies>
     <build>
+    	<outputDirectory>${project.basedir}/src/main/webapp/WEB-INF/classes/</outputDirectory>
 		<sourceDirectory>src/main</sourceDirectory>
 		<testSourceDirectory>src/test</testSourceDirectory>
 		<resources>
