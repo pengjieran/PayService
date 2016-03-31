@@ -17,8 +17,6 @@ public class WebDispatcherServlet extends DispatcherServlet implements WebApplic
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
 
-
-
         System.out.println("初始化系统开始");
     }
 }
