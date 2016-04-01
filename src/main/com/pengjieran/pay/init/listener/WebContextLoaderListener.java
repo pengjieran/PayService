@@ -1,6 +1,5 @@
 package com.pengjieran.pay.init.listener;
 
-import com.pengjieran.pay.init.LoggerInit;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.WebApplicationContext;
 
