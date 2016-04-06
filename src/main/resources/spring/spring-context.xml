@@ -9,6 +9,13 @@
 		
 		<!-- 读入属性配置文件 -->
 	<context:property-placeholder ignore-unresolvable="true" location="classpath:/payservice.properties" />
-	
+
+	<!-- 加载应用属性实例，可通过  @Value("#{jdbc['jdbc.driver']}") String jdbcDriver 方式引用 -->
 	<util:properties id="jdbc" location="classpath:/jdbc.properties"/>
+
+    <!-- 使用Annotation自动注册Bean，解决事物失效问题：在主容器中不扫描@Controller注解，在SpringMvc中只扫描@Controller注解。  -->
+    <context:component-scan base-package="com.pengjieran.pay.service"><!-- base-package 如果多个，用“,”分隔 -->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
 </beans>
