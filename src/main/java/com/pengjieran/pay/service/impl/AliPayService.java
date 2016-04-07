@@ -1,6 +1,8 @@
 package com.pengjieran.pay.service.impl;
 
 import com.pengjieran.pay.service.PayService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -11,8 +13,11 @@ import javax.annotation.PostConstruct;
 @Service(value = "alipayService")
 public class AliPayService implements PayService {
 
+    private static final Logger logger = LoggerFactory.getLogger(AliPayService.class);
+
     @PostConstruct
     public void initAliPay() {
-        System.out.println("初始化项目");
+
+        logger.info("支付宝支付前置初始化");
     }
 }
