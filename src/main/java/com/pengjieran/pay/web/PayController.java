@@ -23,8 +23,6 @@ public class PayController {
     @RequestMapping(value = "/alipayweb", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public String pay(@RequestParam("orderNumber") String orderNumber, HttpServletRequest request, HttpServletResponse response) {
 
-
-
         return "{\"code\":\"0\"}";
     }
 }
