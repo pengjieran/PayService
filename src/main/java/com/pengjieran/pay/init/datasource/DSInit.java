@@ -10,10 +10,6 @@ import javax.sql.DataSource;
  */
 public class DSInit {
 
-//    public DataSource createDataSource() {
-//        SQLBuilderFactory.createSelectSQLBuilder(JdbcUtils.MYSQL).from("aa").from("bb").from("cc").selectWithAlias("aa.name", "name").limit(20, 20).where("aa.id=?").toString();
-//    }
-
     public static void main(String[] args) {
 
         String s = SQLBuilderFactory.createSelectSQLBuilder(JdbcUtils.MYSQL).from("aa,bb,cc").selectWithAlias("aa.name", "name").limit(20, 20).where("aa.id=?").toString();
