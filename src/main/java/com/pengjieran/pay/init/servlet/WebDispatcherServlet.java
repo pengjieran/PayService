@@ -17,7 +17,7 @@ import java.util.EnumSet;
  * 初始化日志以及路由相关的数据
  * Created by aaron on 2016/4/6.
  */
-@WebServlet(name="SpringMvc",urlPatterns={"/pay/*"},initParams={@WebInitParam(name="contextConfigLocation",value="classpath*:**/spring-web.xml")},loadOnStartup=1,asyncSupported=true)
+@WebServlet(name="SpringMvc",urlPatterns={"/pay/*"},initParams={@WebInitParam(name="contextConfigLocation",value="classpath:spring/spring-web.xml")},loadOnStartup=1,asyncSupported=true)
 public class WebDispatcherServlet extends DispatcherServlet implements WebApplicationInitializer{
 
     @Override
@@ -25,7 +25,7 @@ public class WebDispatcherServlet extends DispatcherServlet implements WebApplic
 
         //container.addListener(new ContextLoaderListener());
         //servletContext.addListener(WebContextLoaderListener.class);
-        servletContext.setInitParameter("contextConfigLocation", "classpath*:**/spring-context.xml");
+        servletContext.setInitParameter("contextConfigLocation", "classpath:spring/spring-context.xml,classpath:spring/spring-ds.xml");
         servletContext.setInitParameter("log4jConfigLocation","classpath*:log4j.xml");
         CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
         characterEncodingFilter.setEncoding("UTF-8");
