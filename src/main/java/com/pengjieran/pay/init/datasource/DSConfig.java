@@ -17,6 +17,7 @@ public class DSConfig {
 
     private String driverClassName;
 
+    @Value("#{jdbc['jdbc.defaultAutoCommit']}")
     private boolean defaultAutoCommit;
 
     private String connectProperties;
@@ -32,4 +33,7 @@ public class DSConfig {
 
     @Value("#{jdbc['jdbc.maxWait']}")
     private int maxWait;
+
+    @Value("#{jdbc['jdbc.timeBetweenEvictionRunsMillis']}")
+    private long timeBetweenEvictionRunsMillis;
 }

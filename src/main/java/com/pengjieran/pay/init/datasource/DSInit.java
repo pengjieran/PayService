@@ -10,9 +10,5 @@ import javax.sql.DataSource;
  */
 public class DSInit {
 
-    public static void main(String[] args) {
 
-        String s = SQLBuilderFactory.createSelectSQLBuilder(JdbcUtils.MYSQL).from("aa,bb,cc").selectWithAlias("aa.name", "name").limit(20, 20).where("aa.id=?").toString();
-        System.out.println(s);
-    }
 }
