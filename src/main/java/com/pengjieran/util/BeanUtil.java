@@ -16,15 +16,15 @@ import java.util.Set;
  */
 public class BeanUtil implements ApplicationContextAware {
 
-    private ApplicationContext applicationContext;
+    private static ApplicationContext applicationContext;
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 
-        this.applicationContext = applicationContext;
+        applicationContext = applicationContext;
     }
 
-    public <T> T getBean(String beanName) {
+    public static <T> T getBean(String beanName) {
 
         return (T) applicationContext.getBean(beanName);
     }

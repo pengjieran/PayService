@@ -1,9 +1,9 @@
 package com.pengjieran.pay.web;
 
+import com.pengjieran.util.BeanUtil;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,8 +20,8 @@ public class PayController {
      * 提供支付宝支付web页面的导向服务
      * @return
      */
-    @RequestMapping(value = "/alipayweb", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public String pay(@RequestParam("orderNumber") String orderNumber, HttpServletRequest request, HttpServletResponse response) {
+    @RequestMapping(value = "/alipayweb", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public String pay(HttpServletRequest request, HttpServletResponse response) {
 
         return "{\"code\":\"0\"}";
     }

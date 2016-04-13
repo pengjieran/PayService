@@ -2,6 +2,8 @@ package com.pengjieran.pay.init.datasource;
 
 import com.alibaba.druid.sql.builder.SQLBuilderFactory;
 import com.alibaba.druid.util.JdbcUtils;
+import com.pengjieran.util.BeanUtil;
+import org.springframework.context.ApplicationContext;
 
 import javax.sql.DataSource;
 
@@ -10,5 +12,9 @@ import javax.sql.DataSource;
  */
 public class DSInit {
 
+    public void createDS() {
 
+        DSConfig config = new DSConfig();
+        System.out.println(config.toString());
+    }
 }
