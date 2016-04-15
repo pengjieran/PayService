@@ -8,6 +8,6 @@
     <util:properties id="jdbc" location="classpath:config/jdbc.properties" local-override="true"/>
 
     <context:annotation-config/>
-    <bean id="dsinit" class="com.pengjieran.pay.init.datasource.DSInit" init-method="createDS" lazy-init="true"/>
+    <bean id="dsinit" class="com.pengjieran.pay.init.datasource.DSInit" init-method="createDS" lazy-init="false"/>
 
 </beans>

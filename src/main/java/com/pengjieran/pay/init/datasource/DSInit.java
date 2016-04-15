@@ -3,6 +3,7 @@ package com.pengjieran.pay.init.datasource;
 import com.alibaba.druid.sql.builder.SQLBuilderFactory;
 import com.alibaba.druid.util.JdbcUtils;
 import com.pengjieran.util.BeanUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 
 import javax.sql.DataSource;
@@ -12,9 +13,11 @@ import javax.sql.DataSource;
  */
 public class DSInit {
 
+    @Autowired
+    private DSConfig dsConfig;
+
     public void createDS() {
 
-        DSConfig config = new DSConfig();
-        System.out.println(config.toString());
+        System.out.println(dsConfig.toString());
     }
 }
