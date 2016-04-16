@@ -1,5 +1,6 @@
 package com.pengjieran.util;
 
+import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
@@ -41,6 +42,12 @@ public class BeanUtil implements ApplicationContextAware {
 
                 beanDefinitionBuilder.addPropertyValue((String) entry.getKey(), entry.getValue());
             }
+        }
+
+        if (beanClass.getName().equalsIgnoreCase("DruidDataSource")) {
+
+            beanDefinitionBuilder.setInitMethodName("init");
+            beanDefinitionBuilder.setDestroyMethodName("close");
         }
 
         registerBean(beanName, beanDefinitionBuilder.getRawBeanDefinition());

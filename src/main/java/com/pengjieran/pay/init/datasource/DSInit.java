@@ -20,7 +20,7 @@ public class DSInit {
 
         int count = dsConfig.getCount();
 
-        for (int i = 0; i < count; i++) {
+       for (int i = 0; i < count; i++) {
 
             dsConfig.setId(properties.getProperty("jdbc.id" + i));
             dsConfig.setDriverClassName(properties.getProperty("jdbc.id" + i + ".driverClassName"));

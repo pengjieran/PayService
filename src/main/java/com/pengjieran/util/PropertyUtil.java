@@ -16,7 +16,7 @@ public class PropertyUtil {
 
     public static Properties load(String filePath) {
 
-        InputStream inputStream = ClassLoader.getSystemResourceAsStream(filePath);
+        InputStream inputStream = PropertyUtil.class.getClassLoader().getResourceAsStream(filePath);
         Properties properties = new Properties();
         try {
 
