@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * Created by Aaron on 2016/4/10.
+ * @Component 用于支持属性映射
  */
 @Component
 public class DSConfig {
