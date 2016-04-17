@@ -14,6 +14,11 @@ public class PropertyUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(PropertyUtil.class);
 
+    /**
+     * 相对路径加载properties配置信息，相对于web项目的classes目录
+     * @param filePath
+     * @return
+     */
     public static Properties load(String filePath) {
 
         InputStream inputStream = PropertyUtil.class.getClassLoader().getResourceAsStream(filePath);
