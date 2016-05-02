@@ -25,7 +25,7 @@ public class WebDispatcherServlet extends DispatcherServlet implements WebApplic
 
         //container.addListener(new ContextLoaderListener());
         //servletContext.addListener(WebContextLoaderListener.class);
-        servletContext.setInitParameter("contextConfigLocation", "classpath:spring/spring-context.xml,classpath:spring/spring-ds.xml");
+        servletContext.setInitParameter("contextConfigLocation", "classpath:spring/spring-context.xml");
         servletContext.setInitParameter("log4jConfigLocation","classpath*:log4j.xml");
         CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
         characterEncodingFilter.setEncoding("UTF-8");
