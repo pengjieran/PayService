@@ -17,6 +17,16 @@
         <spring.version>4.2.5.RELEASE</spring.version>
         <druid.version>1.0.18</druid.version>
     </properties>
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>bintray</name>
+            <url>http://jcenter.bintray.com</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -47,6 +57,12 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
+        </dependency>
+        <dependency>
+            <groupId>Pingplusplus</groupId>
+            <artifactId>pingpp-java</artifactId>
+            <version>2.1.7</version>
+            <type>jar</type>
         </dependency>
     </dependencies>
     <build>

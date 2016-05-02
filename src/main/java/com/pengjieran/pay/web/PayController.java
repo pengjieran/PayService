@@ -25,4 +25,15 @@ public class PayController {
 
         return "{\"code\":\"0\"}";
     }
+
+    /**
+     * 调用ping++的支付接口
+     * @return
+     */
+    @RequestMapping(value = "/payping", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public String payping() {
+
+        return "";
+    }
+
 }

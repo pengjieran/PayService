@@ -11,6 +11,7 @@
 	<context:property-placeholder ignore-unresolvable="true" location="classpath:config/payservice.properties" />
 
 	<util:properties id="alipay" location="classpath:config/alipay.properties"/>
+	<util:properties id="pingpp" location="classpath:config/pingpp.properties"/>
 
 	<context:annotation-config/>
     <!-- 使用Annotation自动注册Bean，解决事物失效问题：在主容器中不扫描@Controller注解，在SpringMvc中只扫描@Controller注解。  -->
