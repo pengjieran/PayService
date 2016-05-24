@@ -14,7 +14,7 @@
         </developer>
     </developers>
     <properties>
-        <spring.version>4.2.5.RELEASE</spring.version>
+        <spring.version>4.2.6.RELEASE</spring.version>
         <druid.version>1.0.18</druid.version>
         <mockito.version>2.0.2-beta</mockito.version>
         <pingpp-java.version>2.1.7</pingpp-java.version>
@@ -37,6 +37,12 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <!-- http://mvnrepository.com/artifact/org.springframework/spring-test -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
         </dependency>
         <dependency>
@@ -97,6 +103,7 @@
     </dependencies>
     <build>
 		<sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test</testSourceDirectory>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
